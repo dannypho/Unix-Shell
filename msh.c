@@ -1,25 +1,3 @@
-// The MIT License (MIT)
-// 
-// Copyright (c) 2024 Trevor Bakker 
-// 
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-// 
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-// 
-// 
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
 
 #define _GNU_SOURCE
 
@@ -211,24 +189,8 @@ void execute_command(char *command_string)
       }
         token_count++;
     }
-    // int trimmed_token_length = valid_string + 1;
-
-    // Now print the tokenized input as a debug check
-    // \TODO Remove this code and replace with your shell functionality
-
-    // int token_index  = 0;
-    // for( token_index = 0; token_index < token_count; token_index ++ ) 
-    // {
-    //   printf("token[%d] = %s\n size = %d\n", token_index, token[token_index], token_count );
-    // }
-    // printf("valid_strings = %d", valid_string);
-
+    
     char **trimmed_token = trim_whitespace(token, token_count);
-
-    // for (int i = 0; i < valid_string + 1; i ++)
-    // {
-    //   printf("trimmed_token[%d] = %s\n size = %d\n", i, trimmed_token[i], valid_string + 1);
-    // }
 
     // Handle built-in commands
     if(trimmed_token[0] != NULL)
@@ -385,5 +347,4 @@ int main(int argc, char *argv[])
     free(command_string);
   }
   return 0;
-  // e2520ca2-76f3-90d6-0242ac1210022
 }
