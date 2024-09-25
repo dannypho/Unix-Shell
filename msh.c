@@ -344,7 +344,6 @@ int main(int argc, char *argv[])
       print_error_message();
       exit(1);
     }
-    free(command_string);
   }
   return 0;
 }
